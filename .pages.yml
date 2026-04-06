@@ -31,6 +31,9 @@ content:
         label: Date
         description: The date of this entry.
         type: date
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm
       - name: images
         label: Images
         description: Images for this entry, best one first.
