@@ -45,11 +45,10 @@ content:
         list: true
       - name: body
         label: Body
-        description: A description of this entry, or just write whatever.
+        description: A description for this entry, or just write whatever.
         type: rich-text
       - name: tags
         label: Tags
         description: Categories for this entry.
         type: string
         list: true
-        
