@@ -1,4 +1,6 @@
-media: media
+media:
+  input: media
+  output: /dist/media
 components:
   image:
     type: object
