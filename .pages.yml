@@ -1,6 +1,6 @@
 media:
   input: media
-  output: /dist/media
+  output: /_site/media
 components:
   image:
     type: object
