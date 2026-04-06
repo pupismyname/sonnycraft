@@ -1,5 +1,16 @@
 media: media
-content:
+components:
+  image:
+    type: object
+    label: Image
+    fields:
+      - name: image
+        label: Image
+        type: image
+        media: media
+        rename: safe
+      - name: description
+        type: rich-text
   - name: gallery
     label: Gallery
     type: collection
@@ -13,11 +24,9 @@ content:
         type: date
         time: true
         format: yyyy-MM-dd'T'HH:mm
-      - name: image
-        label: Image
-        type: image
-        media: media
-        rename: safe
+      - name: images
+        label: Images
+        component: image
         list: true
       - name: body
         label: Body
