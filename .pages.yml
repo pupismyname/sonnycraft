@@ -33,6 +33,10 @@ content:
         label: Images
         component: image
         list: true
+      - name: references
+        label: References
+        component: image
+        list: true
       - name: body
         label: Body
         type: rich-text
