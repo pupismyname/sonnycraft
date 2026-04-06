@@ -13,6 +13,7 @@ components:
         label: Title
         type: string
       - name: description
+        label: Description
         type: rich-text
 content:
   - name: gallery
