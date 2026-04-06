@@ -9,6 +9,9 @@ components:
         type: image
         media: media
         rename: safe
+      - name: title
+        label: Title
+        type: string
       - name: description
         type: rich-text
   - name: gallery
