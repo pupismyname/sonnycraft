@@ -9,3 +9,6 @@ content:
         type: string
       - name: body
         type: rich-text
+      - name: tags
+        type: string
+        list: true
