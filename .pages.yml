@@ -11,9 +11,11 @@ components:
         rename: safe
       - name: title
         label: Title
+        description: The title for this specific image.
         type: string
       - name: description
         label: Description
+        description: The description for this specific image.
         type: rich-text
 content:
   - name: gallery
