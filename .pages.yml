@@ -1,13 +1,24 @@
 media: media
 content:
-  - name: pages
-    label: Pages
+  - name: gallery
+    label: Gallery
     type: collection
     path: content
     fields:
       - name: title
         label: Title
         type: string
+      - name: date
+        label: Date
+        type: date
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+      - name: image
+        label: Image
+        type: image
+        media: media
+        rename: safe
+        list: true
       - name: body
         label: Body
         type: rich-text
