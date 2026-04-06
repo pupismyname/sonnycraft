@@ -23,24 +23,31 @@ content:
     fields:
       - name: title
         label: Title
+        description: The title of this entry.
         type: string
       - name: date
         label: Date
+        description: The date of this entry.
         type: date
         time: true
         format: yyyy-MM-dd'T'HH:mm
       - name: images
         label: Images
+        description: Images for this entry, best one first.
         component: image
         list: true
       - name: references
         label: References
+        description: References for this entry, if any.
         component: image
         list: true
       - name: body
         label: Body
+        description: A description of this entry, or just write whatever.
         type: rich-text
       - name: tags
         label: Tags
+        description: Categories for this entry.
         type: string
         list: true
+        
