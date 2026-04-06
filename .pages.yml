@@ -25,11 +25,9 @@ content:
     fields:
       - name: title
         label: Title
-        description: The title of this entry.
         type: string
       - name: date
         label: Date
-        description: The date of this entry.
         type: date
         options:
           time: true
