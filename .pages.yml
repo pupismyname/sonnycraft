@@ -24,7 +24,7 @@ content:
     label: Gallery
     type: collection
     filename: "{primary}.md"
-    path: content
+    path: content/gallery
     fields:
       - name: title
         label: Title
