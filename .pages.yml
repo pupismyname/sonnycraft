@@ -11,7 +11,7 @@ components:
         rename: safe
       - name: title
         label: Title
-        description: The title for this specific image.
+        description: The title of this specific image.
         type: string
       - name: description
         label: Description
