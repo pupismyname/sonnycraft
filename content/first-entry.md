@@ -1,6 +1,6 @@
 ---
 title: First entry
-date: 2026-04-05
+date: 2026-04-05T20:00
 images:
   - image: /media/885-4032x3024.jpg
     title: A filler image
