@@ -14,6 +14,7 @@ components:
         type: string
       - name: description
         type: rich-text
+content:
   - name: gallery
     label: Gallery
     type: collection
