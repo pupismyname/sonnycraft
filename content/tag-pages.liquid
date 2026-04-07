@@ -1,0 +1,24 @@
+---
+layout: layouts/layout.liquid
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter: [ "all" ]
+eleventyComputed:
+  title: "Tagged '{{ tag }}'"
+permalink: "/tags/{{ tag | slugify }}/"
+---
+
+<h1>Tagged '{{ tag }}'</h1>
+<ul class="list-gallery">
+  {% for item in collections[tag] %}
+    <li>
+      <a href="{{ item.url }}">
+        <p><img src="{{item.data.images[0].image}}"></p>
+        <p>{{ item.data.title }}</p>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+

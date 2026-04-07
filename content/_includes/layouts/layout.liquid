@@ -5,27 +5,53 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title }} - Sonny Craft</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
-  {% comment %} <meta property="og:title" content=""> {% endcomment %}
-  {% comment %} <meta property="og:type" content=""> {% endcomment %}
-  {% comment %} <meta property="og:url" content=""> {% endcomment %}
-  {% comment %} <meta property="og:image" content=""> {% endcomment %}
-  {% comment %} <meta property="og:image:alt" content=""> {% endcomment %}
-
-  {% comment %} <link rel="icon" href="/favicon.ico" sizes="any"> {% endcomment %}
-  {% comment %} <link rel="icon" href="/icon.svg" type="image/svg+xml"> {% endcomment %}
-  {% comment %} <link rel="apple-touch-icon" href="icon.png"> {% endcomment %}
-
-  {% comment %} <link rel="manifest" href="site.webmanifest"> {% endcomment %}
-  {% comment %} <meta name="theme-color" content="#fafafa"> {% endcomment %}
+  {% comment -%} <link rel="stylesheet" href="css/style.css"> {% endcomment -%}
+  {% comment -%} <meta name="description" content=""> {% endcomment -%}
+  {% comment -%} <meta property="og:title" content=""> {% endcomment -%}
+  {% comment -%} <meta property="og:type" content=""> {% endcomment -%}
+  {% comment -%} <meta property="og:url" content=""> {% endcomment -%}
+  {% comment -%} <meta property="og:image" content=""> {% endcomment -%}
+  {% comment -%} <meta property="og:image:alt" content=""> {% endcomment -%}
+  {% comment -%} <link rel="icon" href="/favicon.ico" sizes="any"> {% endcomment -%}
+  {% comment -%} <link rel="icon" href="/icon.svg" type="image/svg+xml"> {% endcomment -%}
+  {% comment -%} <link rel="apple-touch-icon" href="icon.png"> {% endcomment -%}
+  {% comment -%} <link rel="manifest" href="site.webmanifest"> {% endcomment -%}
+  {% comment -%} <meta name="theme-color" content="#fafafa"> {% endcomment -%}
+  <style>
+    body {
+      margin: 1rem;
+      padding: 0;
+    }
+    .list-gallery {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+    .list-gallery > li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .list-gallery > li > a {
+      display: block;
+    }
+    .list-gallery img {
+      max-width: 100%;
+    }
+  </style>
 </head>
-
 <body>
 
-  {{ content }}
+  <header>
+    <h1><a href="/">Sonny Craft</a></h1>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
 
 </body>
-
 </html>
