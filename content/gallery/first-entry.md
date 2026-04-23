@@ -12,6 +12,9 @@ references:
   - image: /media/19-3024x4032.jpg
     title: The reference image
     description: Totally different
+  - image: /_site/media/600-3024x4032.jpg
+    title: Another reference
+    description: Some text goes here.
 tags:
   - test
   - watercolor
