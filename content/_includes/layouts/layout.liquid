@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if title %}{{ title }} - {% endif %}Sonny Craft</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
 
     {% comment -%} <meta name="description" content=""> {% endcomment -%}
     {% comment -%} <meta property="og:title" content=""> {% endcomment -%}
@@ -20,24 +23,32 @@
 
   </head>
   <body>
+    <div class="wrapper">
 
+      <header>
+        <h1><a href="/">Sonny Craft</a></h1>
+        {% comment %} <nav>
+          {% assign filteredTags = collections | getKeys | filterTagList | sortAlphabetically -%}
+          <ul>
+            {% for tag in filteredTags %}
+              {% capture tagUrl -%}/tags/{{ tag | slugify }}/{% endcapture -%}
+              <li><a href="{{ tagUrl }}">{{ tag }}</a></li>
+            {% endfor %}
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav> {% endcomment %}
+      </header>
 
-    <header>
-      <h1><a href="/">Sonny Craft</a></h1>
-      <nav>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/gallery">Gallery</a></li>
-          <li><a href="/blog">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
+      <aside>
+        <p>Sonny is an artist that lives in Omaha, Nebraska, USA. If you'd like Sonny to create art for you, <a href="mailto:sonnybrooks@gmail.com">get in touch</a>.</p>
+      </aside>
 
-    {{ content }}
+      {{ content }}
 
-    <footer>
-      <p>&copy; Sonny Craft</p>
-    </footer>
+      <footer>
+        <p>&copy; Sonny Craft</p>
+      </footer>
 
+    </div>
   </body>
 </html>

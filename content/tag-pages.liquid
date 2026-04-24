@@ -11,14 +11,9 @@ permalink: "/tags/{{ tag | slugify }}/"
 ---
 
 <h1>Tagged '{{ tag }}'</h1>
-<ul class="list-gallery">
+<ul class="list-portfolio">
   {% for item in collections[tag] %}
-    <li>
-      <a href="{{ item.url }}">
-        <img src="{{item.data.images[0].image}}">
-        <h2>{{ item.data.title }}</h2>
-      </a>
-    </li>
+    {% render "list-portfolio-item.liquid", item: item %}
   {% endfor %}
 </ul>
 

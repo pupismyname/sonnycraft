@@ -4,19 +4,11 @@ layout: layouts/layout.liquid
 
 <main>
 
-  <h1>Home</h1>
+  <h1>Portfolio</h1>
 
-  {% comment %}
-    Show up to 20 featured items followed by normal items until the total reaches 40.
-  {% endcomment %}
-  <ul class="list-gallery">
-    {% for item in collections.galleryHome %}
-      <li>
-        <a href="{{ item.url }}">
-          <img src="{{item.data.images[0].image}}">
-          <h2>{{ item.data.title }}</h2>
-        </a>
-      </li>
+  <ul class="list-portfolio">
+    {% for item in collections.portfolioHome %}
+      {% render "list-portfolio-item.liquid", item: item %}
     {% endfor %}
   </ul>
 

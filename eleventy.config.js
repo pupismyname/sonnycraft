@@ -28,23 +28,28 @@ export default async function (eleventyConfig) {
 		return `<pre>${JSON.stringify(obj, null, 2)}</pre>`;
 	});
 
-	eleventyConfig.addCollection('galleryHome', async (collectionApi) => {
-		const gallery = collectionApi.getFilteredByTag('gallery');
-		const featured = [];
-		const rest = [];
-		gallery.forEach((item, i) => {
-			if (i >= 40) return;
-			if (featured.length < 10 && item.data.tags.includes('featured')) {
-				featured.push(item);
+	// Build a list of 40 portfolio items. The first 10 featured items are bumped to the top.
+	eleventyConfig.addCollection('portfolioHome', async (collectionApi) => {
+		const featured = 10;
+		const other = 30;
+		const portfolio = collectionApi.getFilteredByTag('portfolio');
+		const featuredItems = [];
+		const otherItems = [];
+		for (const item of portfolio) {
+			// Get out if we have enough of both types of items.
+			if (featuredItems.length >= featured && otherItems.length >= other) break;
+			if (featuredItems.length < featured && item.data.tags.includes('featured')) {
+				featuredItems.push(item);
 			} else {
-				rest.push(item);
+				otherItems.push(item);
 			}
-		});
-		return featured.concat(rest);
+		}
+		// Concat the two lists and slice off any extra.
+		return featuredItems.concat(otherItems).slice(0, featured + other);
 	});
 
 	eleventyConfig.addCollection('notfeatured', async (collectionsApi) => {
-		return collectionsApi.getFilteredByTag('gallery').filter((item) => {
+		return collectionsApi.getFilteredByTag('portfolio').filter((item) => {
 			return !item.data.tags.includes('featured');
 		});
 	});

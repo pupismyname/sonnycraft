@@ -20,11 +20,11 @@ components:
         description: The description for this specific image.
         type: rich-text
 content:
-  - name: gallery
-    label: Gallery
+  - name: portfolio
+    label: Portfolio
     type: collection
     filename: "{primary}.md"
-    path: content/gallery
+    path: content/portfolio
     fields:
       - name: title
         label: Title

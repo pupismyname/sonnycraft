@@ -1,8 +1,17 @@
+* {
+  /* background: #f001; */
+  /* outline: 1px solid red; */
+}
+
 body {
-  margin: 1rem;
+  margin: 0;
   padding: 0;
   font-family: sans-serif;
   color: #000;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr minmax(auto, 100ch) 1fr;
+  line-height: 1.4;
 }
 
 a {
@@ -26,9 +35,22 @@ img {
   max-height: 40rem;
 }
 
-* {
-  /* background: #f001; */
-  /* outline: 1px solid red; */
+.borel-regular,
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Borel", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 0.9;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p, ul, ol, dl, table, blockquote {
+  margin-block: 1rem;
+}
+
+.wrapper {
+  grid-column: 2;
 }
 
 header {
@@ -36,11 +58,10 @@ header {
   gap: 1rem 2rem;
   flex-wrap: wrap;
   align-items: baseline;
-  margin: 2rem 0;
 }
 
 header h1 {
-  margin: 0;
+  margin: 2rem 0 0.4rem;
 }
 
 nav ul {
@@ -65,16 +86,20 @@ header a {
   margin: -0.5rem;
 }
 
-.list-gallery {
+header, aside, main, footer {
+  margin: 1rem 0;
+}
+
+.list-portfolio {
   list-style-type: none;
-  margin: 0 calc(-1rem + 1px);
+  /* margin: 0 calc(-1rem + 1px); */
   padding: 0;
   display: grid;
   gap: 1px;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
-.list-gallery > li {
+.list-portfolio > li {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -83,13 +108,13 @@ header a {
   aspect-ratio: 1 / 1;
 }
 
-.list-gallery > li > a {
+.list-portfolio > li > a {
   display: block;
   position: absolute;
   inset: 0;
 }
 
-.list-gallery img {
+.list-portfolio img {
   display: block;
   width: 100%;
   height: 100%;

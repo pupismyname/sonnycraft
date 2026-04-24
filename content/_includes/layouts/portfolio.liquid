@@ -13,6 +13,7 @@ layout: layouts/layout.liquid
   {% for image in images %}
     <li>
       <img src="{{ image.image }}">
+      <p>{{ image.description }}</p>
     </li>
   {% endfor %}
 </ul>
