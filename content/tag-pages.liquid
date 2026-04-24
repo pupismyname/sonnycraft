@@ -15,8 +15,8 @@ permalink: "/tags/{{ tag | slugify }}/"
   {% for item in collections[tag] %}
     <li>
       <a href="{{ item.url }}">
-        <p><img src="{{item.data.images[0].image}}"></p>
-        <p>{{ item.data.title }}</p>
+        <img src="{{item.data.images[0].image}}">
+        <h2>{{ item.data.title }}</h2>
       </a>
     </li>
   {% endfor %}

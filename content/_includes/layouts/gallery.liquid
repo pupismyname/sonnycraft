@@ -7,22 +7,28 @@ layout: layouts/layout.liquid
 
 {{ body }}
 
-<ul class="list-gallery">
+<h2>Gallery</h2>
+
+<ul class="list-entry">
   {% for image in images %}
     <li>
-      <p><img src="{{ image.image }}"></p>
+      <img src="{{ image.image }}">
     </li>
   {% endfor %}
 </ul>
 
-<ul class="list-gallery">
+<h2>References</h2>
+
+<ul class="list-entry">
   {% for image in references %}
     <li>
-      <p><img src="{{ image.image }}"></p>
+      <img src="{{ image.image }}">
     </li>
   {% endfor %}
 </ul>
 
-{% for item in tags %}
-  <p>{{ item }}</p>
-{% endfor %}
+<ul class="list-tags">
+  {% for item in tags %}
+    <li><a href="/tags/{{ item }}">{{ item }}</a></li>
+  {% endfor %}
+</ul>

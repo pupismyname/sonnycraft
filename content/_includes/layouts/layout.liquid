@@ -1,57 +1,43 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title %}{{ title }} - {% endif %}Sonny Craft</title>
+    <link rel="stylesheet" href="/styles/main.css">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }} - Sonny Craft</title>
-  {% comment -%} <link rel="stylesheet" href="css/style.css"> {% endcomment -%}
-  {% comment -%} <meta name="description" content=""> {% endcomment -%}
-  {% comment -%} <meta property="og:title" content=""> {% endcomment -%}
-  {% comment -%} <meta property="og:type" content=""> {% endcomment -%}
-  {% comment -%} <meta property="og:url" content=""> {% endcomment -%}
-  {% comment -%} <meta property="og:image" content=""> {% endcomment -%}
-  {% comment -%} <meta property="og:image:alt" content=""> {% endcomment -%}
-  {% comment -%} <link rel="icon" href="/favicon.ico" sizes="any"> {% endcomment -%}
-  {% comment -%} <link rel="icon" href="/icon.svg" type="image/svg+xml"> {% endcomment -%}
-  {% comment -%} <link rel="apple-touch-icon" href="icon.png"> {% endcomment -%}
-  {% comment -%} <link rel="manifest" href="site.webmanifest"> {% endcomment -%}
-  {% comment -%} <meta name="theme-color" content="#fafafa"> {% endcomment -%}
-  <style>
-    body {
-      margin: 1rem;
-      padding: 0;
-    }
-    .list-gallery {
-      list-style-type: none;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
-    }
-    .list-gallery > li {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    .list-gallery > li > a {
-      display: block;
-    }
-    .list-gallery img {
-      max-width: 100%;
-    }
-  </style>
-</head>
-<body>
+    {% comment -%} <meta name="description" content=""> {% endcomment -%}
+    {% comment -%} <meta property="og:title" content=""> {% endcomment -%}
+    {% comment -%} <meta property="og:type" content=""> {% endcomment -%}
+    {% comment -%} <meta property="og:url" content=""> {% endcomment -%}
+    {% comment -%} <meta property="og:image" content=""> {% endcomment -%}
+    {% comment -%} <meta property="og:image:alt" content=""> {% endcomment -%}
+    {% comment -%} <link rel="icon" href="/favicon.ico" sizes="any"> {% endcomment -%}
+    {% comment -%} <link rel="icon" href="/icon.svg" type="image/svg+xml"> {% endcomment -%}
+    {% comment -%} <link rel="apple-touch-icon" href="icon.png"> {% endcomment -%}
+    {% comment -%} <link rel="manifest" href="site.webmanifest"> {% endcomment -%}
+    {% comment -%} <meta name="theme-color" content="#fafafa"> {% endcomment -%}
 
-  <header>
-    <h1><a href="/">Sonny Craft</a></h1>
-  </header>
+  </head>
+  <body>
 
-  <main>
+
+    <header>
+      <h1><a href="/">Sonny Craft</a></h1>
+      <nav>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
     {{ content }}
-  </main>
 
-</body>
+    <footer>
+      <p>&copy; Sonny Craft</p>
+    </footer>
+
+  </body>
 </html>
