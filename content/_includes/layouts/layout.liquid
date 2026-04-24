@@ -27,20 +27,19 @@
 
       <header>
         <h1><a href="/">Sonny Craft</a></h1>
-        {% comment %} <nav>
-          {% assign filteredTags = collections | getKeys | filterTagList | sortAlphabetically -%}
+        <nav>
+          {% comment %} {% assign filteredTags = collections | getKeys | filterTagList | sortAlphabetically -%} {% endcomment %}
           <ul>
-            {% for tag in filteredTags %}
+            {% for tag in collections.tagList %}
               {% capture tagUrl -%}/tags/{{ tag | slugify }}/{% endcapture -%}
               <li><a href="{{ tagUrl }}">{{ tag }}</a></li>
             {% endfor %}
-            <li><a href="/about">About</a></li>
           </ul>
-        </nav> {% endcomment %}
+        </nav>
       </header>
 
       <aside>
-        <p>Sonny is an artist that lives in Omaha, Nebraska, USA. If you'd like Sonny to create art for you, <a href="mailto:sonnybrooks@gmail.com">get in touch</a>.</p>
+        {{ bio }}
       </aside>
 
       {{ content }}

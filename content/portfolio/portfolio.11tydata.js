@@ -1,6 +1,6 @@
 export default {
 	tags: [
-		'portfolio',
+		'Portfolio',
 	],
 	layout: 'layouts/portfolio.liquid',
 };

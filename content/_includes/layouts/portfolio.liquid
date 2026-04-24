@@ -30,6 +30,6 @@ layout: layouts/layout.liquid
 
 <ul class="list-tags">
   {% for item in tags %}
-    <li><a href="/tags/{{ item }}">{{ item }}</a></li>
+    <li><a href="/tags/{{ item | slugify }}">{{ item }}</a></li>
   {% endfor %}
 </ul>

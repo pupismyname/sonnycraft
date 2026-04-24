@@ -32,13 +32,13 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addCollection('portfolioHome', async (collectionApi) => {
 		const featured = 10;
 		const other = 30;
-		const portfolio = collectionApi.getFilteredByTag('portfolio');
+		const portfolio = collectionApi.getFilteredByTag('Portfolio');
 		const featuredItems = [];
 		const otherItems = [];
 		for (const item of portfolio) {
 			// Get out if we have enough of both types of items.
 			if (featuredItems.length >= featured && otherItems.length >= other) break;
-			if (featuredItems.length < featured && item.data.tags.includes('featured')) {
+			if (featuredItems.length < featured && item.data.tags.includes('Featured')) {
 				featuredItems.push(item);
 			} else {
 				otherItems.push(item);
@@ -48,10 +48,17 @@ export default async function (eleventyConfig) {
 		return featuredItems.concat(otherItems).slice(0, featured + other);
 	});
 
-	eleventyConfig.addCollection('notfeatured', async (collectionsApi) => {
-		return collectionsApi.getFilteredByTag('portfolio').filter((item) => {
-			return !item.data.tags.includes('featured');
+	eleventyConfig.addCollection('tagList', (collectionApi) => {
+		const tagList = new Set();
+		collectionApi.getFilteredByTag('Portfolio').forEach((item) => {
+			if (!item.data.tags) return;
+			const remove = [ 'Portfolio', 'Test' ];
+			const tags = item.data.tags.filter((tag) => {
+				return !remove.includes(tag);
+			});
+			tags.forEach((tag) => tagList.add(tag));
 		});
+		return Array.from(tagList).sort();
 	});
 
 	return {
