@@ -1,42 +1,38 @@
 ---
-layout: layouts/layout.liquid
+layout: layouts/page.liquid
 ---
 
-<main>
-
-  <header class="entry-header">
-    <h1>{{ title }}</h1>
-    <div class="meta">
-      <p class="meta-date">{{ page.date | niceDate }}</p>
-      <ul class="list-tags meta-tags">
-        {% assign filteredTags = tags | filterTags %}
-        {% for item in filteredTags %}
-          <li><a href="/tags/{{ item | slugify }}">{{ item }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </header>
-
-  <div class="section-entry entry-body">
-    {{ content }}
-  </div>
-
-  <div class="section-entry entry-gallery">
-    <h2>Gallery</h2>
-    <ul class="list-entry">
-      {% for image in images %}
-        {% render "list-entry-item.liquid", image: image %}
+<header class="entry-header">
+  <h1>{{ title }}</h1>
+  <div class="meta">
+    <p class="meta-date">{{ page.date | niceDate }}</p>
+    <ul class="list-tags meta-tags">
+      {% assign filteredTags = tags | filterTags %}
+      {% for item in filteredTags %}
+        <li><a href="/tags/{{ item | slugify }}">{{ item }}</a></li>
       {% endfor %}
     </ul>
   </div>
+</header>
 
-  <aside class="section-entry entry-references">
-    <h2>References</h2>
-    <ul class="list-entry">
-      {% for image in references %}
-        {% render "list-entry-item.liquid", image: image %}
-      {% endfor %}
-    </ul>
-  </aside>
+<div class="section-entry entry-body">
+  {{ content }}
+</div>
 
-</main>
+<div class="section-entry entry-gallery">
+  <h2>Gallery</h2>
+  <ul class="list-entry">
+    {% for image in images %}
+      {% render "list-entry-item.liquid", image: image %}
+    {% endfor %}
+  </ul>
+</div>
+
+<aside class="section-entry entry-references">
+  <h2>References</h2>
+  <ul class="list-entry">
+    {% for image in references %}
+      {% render "list-entry-item.liquid", image: image %}
+    {% endfor %}
+  </ul>
+</aside>

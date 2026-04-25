@@ -209,3 +209,7 @@ footer {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+.explore {
+  margin: 4rem 0;
+}

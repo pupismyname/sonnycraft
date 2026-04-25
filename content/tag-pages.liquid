@@ -1,5 +1,4 @@
 ---
-layout: layouts/layout.liquid
 pagination:
   data: collections
   size: 1
@@ -10,16 +9,12 @@ eleventyComputed:
 permalink: "/tags/{{ tag | slugify }}/"
 ---
 
-<main>
+<header>
+  <h1>{{ tag }} work</h1>
+</header>
 
-  <header>
-    <h1>{{ tag }} work</h1>
-  </header>
-
-  <ul class="list-portfolio">
-    {% for item in collections[tag] %}
-      {% render "list-portfolio-item.liquid", item: item %}
-    {% endfor %}
-  </ul>
-
-  </main>
+<ul class="list-portfolio">
+  {% for item in collections[tag] %}
+    {% render "list-portfolio-item.liquid", item: item %}
+  {% endfor %}
+</ul>
