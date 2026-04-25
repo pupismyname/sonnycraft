@@ -10,10 +10,16 @@ eleventyComputed:
 permalink: "/tags/{{ tag | slugify }}/"
 ---
 
-<h1>{{ tag }} work</h1>
-<ul class="list-portfolio">
-  {% for item in collections[tag] %}
-    {% render "list-portfolio-item.liquid", item: item %}
-  {% endfor %}
-</ul>
+<main>
 
+  <header>
+    <h1>{{ tag }} work</h1>
+  </header>
+
+  <ul class="list-portfolio">
+    {% for item in collections[tag] %}
+      {% render "list-portfolio-item.liquid", item: item %}
+    {% endfor %}
+  </ul>
+
+  </main>

@@ -6,7 +6,7 @@ layout: layouts/layout.liquid
   {{ content }}
 </main>
 
-<aside>
+<aside class="group-portfolio group-portfolio-featured">
   <h2>Featured</h2>
   <ul class="list-portfolio">
     {% for item in collections.featured limit:3 %}
@@ -20,7 +20,7 @@ layout: layouts/layout.liquid
   </ul>
 </aside>
 
-<aside>
+<aside class="group-portfolio group-portfolio-latest">
   <h2>Latest</h2>
   <ul class="list-portfolio">
     {% for item in collections.portfolio limit:3 %}

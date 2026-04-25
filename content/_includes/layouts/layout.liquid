@@ -25,7 +25,7 @@
   <body>
     <div class="wrapper">
 
-      <header>
+      <header class="masthead">
         <h1><a href="/">Sonny Craft</a></h1>
         <nav>
           {% comment %} {% assign filteredTags = collections | getKeys | filterTagList | sortAlphabetically -%} {% endcomment %}
@@ -38,7 +38,7 @@
         </nav>
       </header>
 
-      <aside>
+      <aside class="bio">
         {{ global.bio }}
       </aside>
 

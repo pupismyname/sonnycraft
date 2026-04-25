@@ -2,34 +2,46 @@
 layout: layouts/layout.liquid
 ---
 
-<h1>{{ title }}</h1>
-<p>{{ page.date | niceDate }}</p>
+<main>
 
-{{ body }}
+  <header>
+    <h1>{{ title }}</h1>
+    <p class="meta">{{ page.date | niceDate }}</p>
+  </header>
 
-<h2>Gallery</h2>
+  <div class="portfolio-body">
+    {{ content }}
+  </div>
 
-<ul class="list-entry">
-  {% for image in images %}
-    <li>
-      <img src="{{ image.image }}">
-      <p>{{ image.description }}</p>
-    </li>
-  {% endfor %}
-</ul>
+  <div class="portfolio-gallery">
+    <h2>Gallery</h2>
+    <ul class="list-entry">
+      {% for image in images %}
+        <li>
+          <img src="{{ image.image }}">
+          <p>{{ image.description }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-<h2>References</h2>
+  <aside class="portfolio-references">
+    <h2>References</h2>
+    <ul class="list-entry">
+      {% for image in references %}
+        <li>
+          <img src="{{ image.image }}">
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
 
-<ul class="list-entry">
-  {% for image in references %}
-    <li>
-      <img src="{{ image.image }}">
-    </li>
-  {% endfor %}
-</ul>
+  <aside class="portfolio-tags">
+    <ul class="list-tags">
+      {% for item in tags %}
+        <li><a href="/tags/{{ item | slugify }}">{{ item }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
 
-<ul class="list-tags">
-  {% for item in tags %}
-    <li><a href="/tags/{{ item | slugify }}">{{ item }}</a></li>
-  {% endfor %}
-</ul>
+</main>
