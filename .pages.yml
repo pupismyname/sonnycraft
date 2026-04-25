@@ -20,12 +20,15 @@ components:
         description: The description for this specific image.
         type: rich-text
 content:
-  - name: bio
-    label: Bio
-    type: rich-text
-    options:
-      media: media
-      path: /_site/media
+  - name: site-configuration
+    label: Site configuration
+    type: file
+    path: content/_data/configuration.json
+    fields:
+      - name: bio
+        label: Bio
+        type: rich-text
+        description: A little about yourself
   - name: portfolio
     label: Portfolio
     type: collection
