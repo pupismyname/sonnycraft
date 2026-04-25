@@ -28,10 +28,10 @@ content:
       - name: bio
         label: Bio
         type: rich-text
-        description: A little about yourself
+        description: A little about yourself.
         options:
           format: html
-          media: content_images
+          media: media
           path: /media
   - name: portfolio
     label: Portfolio
