@@ -20,6 +20,12 @@ components:
         description: The description for this specific image.
         type: rich-text
 content:
+  - name: bio
+    label: Bio
+    type: rich-text
+    options:
+      media: media
+      path: /_site/media
   - name: portfolio
     label: Portfolio
     type: collection
