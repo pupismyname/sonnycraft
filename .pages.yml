@@ -31,7 +31,8 @@ content:
         description: A little about yourself
         options:
           format: html
-          media: media
+          media: content_images
+          path: /_site/media
   - name: portfolio
     label: Portfolio
     type: collection
