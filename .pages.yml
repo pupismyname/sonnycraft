@@ -32,7 +32,7 @@ content:
         options:
           format: html
           media: content_images
-          path: /_site/media
+          path: /media
   - name: portfolio
     label: Portfolio
     type: collection
