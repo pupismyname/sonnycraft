@@ -176,7 +176,7 @@ footer {
 
 .entry-references .list-entry {
   gap: 2rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .list-entry li {
@@ -194,11 +194,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  opacity: 0.6;
 }
 
 .meta-date {
   margin: 0;
-  color: #00000088;
 }
 
 .list-tags {

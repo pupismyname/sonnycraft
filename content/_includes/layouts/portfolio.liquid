@@ -3,9 +3,9 @@ layout: layouts/page.liquid
 ---
 
 <header class="entry-header">
-  <h1>{{ title }}</h1>
+  <h1><a href=".">{{ title }}</a></h1>
   <div class="meta">
-    <p class="meta-date">{{ page.date | niceDate }}</p>
+    <p class="meta-date"><a href=".">{{ page.date | niceDate }}</a></p>
     <ul class="list-tags meta-tags">
       {% assign filteredTags = tags | filterTags %}
       {% for item in filteredTags %}

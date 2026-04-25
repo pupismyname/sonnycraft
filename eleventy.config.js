@@ -1,10 +1,13 @@
 import { DateTime } from 'luxon';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default async function (eleventyConfig) {
 
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+
 	// 'passthrough' only applies to --serve or --watch
-	eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
-	eleventyConfig.addPassthroughCopy('media');
+	// eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
+	eleventyConfig.addPassthroughCopy('content/media', 'media');
 	eleventyConfig.addPassthroughCopy('styles');
 
 	eleventyConfig.addFilter('sortAlphabetically', strings =>
