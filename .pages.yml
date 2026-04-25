@@ -20,10 +20,10 @@ components:
         description: The description for this specific image.
         type: rich-text
 content:
-  - name: site-configuration
-    label: Site configuration
+  - name: global
+    label: Global values
     type: file
-    path: content/_data/configuration.json
+    path: content/_data/global.json
     fields:
       - name: bio
         label: Bio
