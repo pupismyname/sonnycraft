@@ -31,7 +31,6 @@ content:
         description: A little about yourself.
         options:
           format: html
-          media: media
           path: /media
   - name: portfolio
     label: Portfolio
