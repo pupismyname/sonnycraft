@@ -29,6 +29,8 @@ content:
         label: Bio
         type: rich-text
         description: A little about yourself
+        options:
+          format: html
   - name: portfolio
     label: Portfolio
     type: collection
