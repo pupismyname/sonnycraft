@@ -77,14 +77,14 @@ p, ul, ol, dl, table, blockquote {
   grid-column: 2;
 }
 
-header {
+.masthead {
   display: flex;
   gap: 1rem 2rem;
   flex-wrap: wrap;
   align-items: baseline;
 }
 
-header h1 {
+.masthead h1 {
   margin: 2rem 0 0.4rem;
 }
 
@@ -104,7 +104,7 @@ nav ul li {
   padding: 0;
 }
 
-header a {
+.masthead a {
   display: block;
   padding: 0.5rem;
   margin: -0.5rem;
@@ -114,9 +114,17 @@ header, aside, main, footer {
   margin: 1rem 0;
 }
 
+footer {
+  margin-top: 3rem;
+}
+
 .bio {
   background: #00000011;
   padding: 1rem 2rem;
+}
+
+.section-entry {
+  margin: 3rem 0 4rem;
 }
 
 .list-portfolio {
@@ -161,14 +169,43 @@ header, aside, main, footer {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.entry-references .list-entry {
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .list-entry li {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  place-self: center;
 }
 
-.meta {
+.list-entry img {
+  max-width: 100%;
+}
+
+.entry-header .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.meta-date {
+  margin: 0;
   color: #00000088;
+}
+
+.list-tags {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }

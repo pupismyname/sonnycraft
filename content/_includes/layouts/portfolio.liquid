@@ -4,42 +4,37 @@ layout: layouts/layout.liquid
 
 <main>
 
-  <header>
+  <header class="entry-header">
     <h1>{{ title }}</h1>
-    <p class="meta">{{ page.date | niceDate }}</p>
+    <div class="meta">
+      <p class="meta-date">{{ page.date | niceDate }}</p>
+      <ul class="list-tags meta-tags">
+        {% assign filteredTags = tags | filterTags %}
+        {% for item in filteredTags %}
+          <li><a href="/tags/{{ item | slugify }}">{{ item }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
   </header>
 
-  <div class="portfolio-body">
+  <div class="section-entry entry-body">
     {{ content }}
   </div>
 
-  <div class="portfolio-gallery">
+  <div class="section-entry entry-gallery">
     <h2>Gallery</h2>
     <ul class="list-entry">
       {% for image in images %}
-        <li>
-          <img src="{{ image.image }}">
-          <p>{{ image.description }}</p>
-        </li>
+        {% render "list-entry-item.liquid", image: image %}
       {% endfor %}
     </ul>
   </div>
 
-  <aside class="portfolio-references">
+  <aside class="section-entry entry-references">
     <h2>References</h2>
     <ul class="list-entry">
       {% for image in references %}
-        <li>
-          <img src="{{ image.image }}">
-        </li>
-      {% endfor %}
-    </ul>
-  </aside>
-
-  <aside class="portfolio-tags">
-    <ul class="list-tags">
-      {% for item in tags %}
-        <li><a href="/tags/{{ item | slugify }}">{{ item }}</a></li>
+        {% render "list-entry-item.liquid", image: image %}
       {% endfor %}
     </ul>
   </aside>

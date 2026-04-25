@@ -23,6 +23,11 @@ export default async function (eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, { zone: 'America/Chicago' }).toFormat('DDD, t');
 	});
 
+	eleventyConfig.addFilter('filterTags', (tags) => {
+		if (!tags) return [];
+		return filterTags(tags).sort();
+	});
+
 	// for debug
 	eleventyConfig.addFilter('json', (obj) => {
 		return `<pre>${JSON.stringify(obj, null, 2)}</pre>`;
@@ -52,14 +57,18 @@ export default async function (eleventyConfig) {
 		const tagList = new Set();
 		collectionApi.getFilteredByTag('Portfolio').forEach((item) => {
 			if (!item.data.tags) return;
-			const remove = [ 'Portfolio', 'Test' ];
-			const tags = item.data.tags.filter((tag) => {
-				return !remove.includes(tag);
-			});
+			const tags = filterTags(item.data.tags);
 			tags.forEach((tag) => tagList.add(tag));
 		});
 		return Array.from(tagList).sort();
 	});
+
+	function filterTags (tags) {
+		const remove = [ 'Portfolio', 'Test' ];
+		return tags.filter((tag) => {
+			return !remove.includes(tag);
+		});
+	}
 
 	return {
 		dir: {
