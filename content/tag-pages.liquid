@@ -6,11 +6,11 @@ pagination:
   alias: tag
   filter: [ "all" ]
 eleventyComputed:
-  title: "{{ tag }} portfolio"
+  title: "{{ tag }} work"
 permalink: "/tags/{{ tag | slugify }}/"
 ---
 
-<h1>{{ tag }} portfolio</h1>
+<h1>{{ tag }} work</h1>
 <ul class="list-portfolio">
   {% for item in collections[tag] %}
     {% render "list-portfolio-item.liquid", item: item %}
