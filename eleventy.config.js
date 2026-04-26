@@ -3,7 +3,14 @@ import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default async function (eleventyConfig) {
 
-	eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		widths: [ 850, 'auto' ],
+		htmlOptions: {
+			imgAttributes: {
+				loading: 'lazy',
+			},
+		},
+	});
 
 	// 'passthrough' only applies to --serve or --watch
 	// eleventyConfig.setServerPassthroughCopyBehavior('passthrough');

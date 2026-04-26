@@ -4,24 +4,24 @@
 }
 
 :root {
-  font-size: 100%;
+  font-size: 85%;
 }
 
-@media (max-width: 800px) {
-  :root {
-    font-size: 95%;
-  }
-}
-
-@media (max-width: 600px) {
+@media (min-width: 400px) {
   :root {
     font-size: 90%;
   }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 600px) {
   :root {
-    font-size: 85%;
+    font-size: 95%;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 100%;
   }
 }
 
@@ -53,10 +53,8 @@ a:hover, a:focus, a:active {
 }
 
 img {
-  width: auto;
   height: auto;
-  max-width: 40rem;
-  max-height: 40rem;
+  max-width: 100%;
 }
 
 .borel-regular,
@@ -147,7 +145,7 @@ footer {
   transition: transform 0.2s ease;
 }
 
-.list-portfolio > li:hover {
+.list-portfolio > li:hover, .list-portfolio > li:focus-within {
   z-index: 1;
   transform: scale(1.03);
 }
@@ -171,23 +169,43 @@ footer {
   padding: 0;
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.entry-references .list-entry {
-  gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .list-entry li {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  place-self: center;
 }
 
-.list-entry img {
-  max-width: 100%;
+@media (min-width: 400px) {
+  .list-entry li {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .entry-references .list-entry li {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (min-width: 800px) {
+  .entry-references .list-entry li {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+a.list-entry-link {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+a.list-entry-link:hover, a.list-entry-link:focus {
+  transform: scale(1.03);
+}
+
+a.list-entry-link img {
+  display: block;
 }
 
 .entry-header .meta {

@@ -1,7 +1,11 @@
 <li>
-  <img alt="{{ image.title }}" loading="lazy" src="{{ image.image }}">
-  <h3>{{ image.title }}</h3>
-  <div class="list-entry-description">
-    {{ image.description }}
+  <a class="list-entry-link" href="{{ image.image }}">
+    <img alt="{{ image.title }}" src="{{ image.image }}">
+  </a>
+  <div class="list-entry-details">
+    <h3>{{ image.title }}</h3>
+    <div class="list-entry-description">
+      {{ image.description }}
+    </div>
   </div>
 </li>
