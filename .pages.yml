@@ -1,5 +1,5 @@
 media:
-  input: media
+  input: content/media
   output: /content/media
 components:
   image:
