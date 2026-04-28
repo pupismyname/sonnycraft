@@ -67,6 +67,11 @@ content:
         description: Ready to publish?
         type: boolean
         default: true
+      - name: featured
+        label: Featured
+        description: Feature this item
+        type: boolean
+        default: false
       - name: images
         label: Images
         description: Images for this entry, best one first.
