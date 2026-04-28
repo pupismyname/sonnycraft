@@ -32,8 +32,8 @@ content:
     path: content/_data/categories.json
     list: true
     fields:
-      - name: label
-        label: Label
+      - name: title
+        label: Title
         type: string
         description: The pretty name for this category.
       - name: slug

@@ -1,36 +1,36 @@
 [
   {
-    "label": "Canvas Paintings",
+    "title": "Canvas Paintings",
     "slug": "canvas",
     "hidden": false
   },
   {
-    "label": "Custom Door Hangers",
+    "title": "Custom Door Hangers",
     "slug": "hangers",
     "hidden": false
   },
   {
-    "label": "Digital Art",
+    "title": "Digital Art",
     "slug": "digital",
     "hidden": false
   },
   {
-    "label": "Handlettering",
+    "title": "Handlettering",
     "slug": "handlettering",
     "hidden": false
   },
   {
-    "label": "Stencils & Decals",
+    "title": "Stencils & Decals",
     "slug": "stencils-decals",
     "hidden": false
   },
   {
-    "label": "String Art",
+    "title": "String Art",
     "slug": "string",
     "hidden": false
   },
   {
-    "label": "Other Crafts",
+    "title": "Other Crafts",
     "slug": "other",
     "hidden": false
   }
