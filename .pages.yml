@@ -39,9 +39,11 @@ content:
         - name: label
           label: Label
           type: string
+          description: The pretty name for this category.
         - name: slug
           label: Slug
           type: string
+          description: What appears in the URL for this category (lowercase, no spaces or weird characters)
   - name: portfolio
     label: Portfolio
     type: collection
