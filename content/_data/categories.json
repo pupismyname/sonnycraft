@@ -33,5 +33,10 @@
     "label": "Other Crafts",
     "slug": "other",
     "hidden": false
+  },
+  {
+    "label": "test",
+    "slug": "test",
+    "hidden": false
   }
 ]
