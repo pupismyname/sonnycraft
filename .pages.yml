@@ -96,3 +96,4 @@ content:
         options:
           collection: categories
           multiple: true
+          search: "label,slug"
