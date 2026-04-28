@@ -17,7 +17,7 @@ components:
         type: rich-text
 content:
   - name: global
-    label: Global values
+    label: Global
     type: file
     path: content/_data/global.json
     fields:
