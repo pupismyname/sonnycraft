@@ -92,4 +92,4 @@ content:
         options:
           collection: categories
           multiple: true
-          search: "label,slug,description"
+          search: "fields.label,fields.slug,fields.description"
