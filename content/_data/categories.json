@@ -1,38 +1,8 @@
 {
-  "category": [
+  "categories": [
     {
-      "label": "Canvas Paintings",
-      "slug": "canvas",
-      "hidden": false
-    },
-    {
-      "label": "Custom Door Hangers",
-      "slug": "hangers",
-      "hidden": false
-    },
-    {
-      "label": "Digital Art",
-      "slug": "digital",
-      "hidden": false
-    },
-    {
-      "label": "Handlettering",
-      "slug": "handlettering",
-      "hidden": false
-    },
-    {
-      "label": "Stencils & Decals",
-      "slug": "stencils-decals",
-      "hidden": false
-    },
-    {
-      "label": "String Art",
-      "slug": "string",
-      "hidden": false
-    },
-    {
-      "label": "Other Crafts",
-      "slug": "other",
+      "label": "asdf",
+      "slug": "asdfasdf",
       "hidden": false
     }
   ]
