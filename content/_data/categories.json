@@ -3,7 +3,7 @@
     "label": "Canvas Paintings",
     "slug": "canvas",
     "hidden": false,
-    "body": "asdfasdf"
+    "description": "it's the description"
   },
   {
     "label": "Custom Door Hangers",
@@ -28,8 +28,7 @@
   {
     "label": "String Art",
     "slug": "string",
-    "hidden": false,
-    "body": "asdf"
+    "hidden": false
   },
   {
     "label": "Other Crafts",
