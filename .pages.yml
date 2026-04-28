@@ -34,8 +34,10 @@ content:
       - name: categories
         label: Categories
         type: object
-        summary: "{Label}: {slug}"
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{Label}: {slug}"
         fields:
         - name: label
           label: Label
