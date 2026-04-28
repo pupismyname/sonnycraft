@@ -84,7 +84,10 @@ content:
         label: References
         description: References for this entry, if any.
         component: image
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title} ({index})"
       - name: body
         label: Body
         description: A description for this entry, or just write whatever.
