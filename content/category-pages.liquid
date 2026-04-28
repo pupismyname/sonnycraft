@@ -1,0 +1,19 @@
+---
+pagination:
+  data: categories
+  size: 1
+  alias: category
+eleventyComputed:
+  title: "{{ category }} work"
+permalink: "/categories/{{ category.slug }}/"
+---
+
+<header>
+  <h1>{{ category.label }} work</h1>
+</header>
+
+<ul class="list-portfolio">
+  {% for item in category %}
+    {% render "list-portfolio-item.liquid", item: item %}
+  {% endfor %}
+</ul>

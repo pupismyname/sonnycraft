@@ -31,11 +31,11 @@ published: true
       <header class="masthead">
         <h1><a href="/">Sonny Craft</a></h1>
         <nav>
-          {% comment %} {% assign filteredTags = collections | getKeys | filterTagList | sortAlphabetically -%} {% endcomment %}
           <ul>
-            {% for tag in collections.tagList %}
-              {% capture tagUrl -%}/tags/{{ tag | slugify }}/{% endcapture -%}
-              <li><a href="{{ tagUrl }}">{{ tag }}</a></li>
+            {% for category in categories %}
+              hello
+              {% capture categoryUrl -%}/categories/{{ category.slug }}/{% endcapture -%}
+              <li><a href="{{ categoryUrl }}">{{ category.label }}</a></li>
             {% endfor %}
           </ul>
         </nav>

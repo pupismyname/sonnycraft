@@ -6,28 +6,28 @@ layout: layouts/layout.liquid
   {{ content }}
 </main>
 
-{% if collections.Featured != blank and collections.Portfolio != blank %}
+{% if collections.featured != blank and collections.portfolio != blank %}
 
   <aside class="explore">
 
     <h1>More from Sonny</h1>
 
-    {% if collections.Featured != blank %}
+    {% if collections.featured != blank %}
       <div class="group-portfolio group-portfolio-featured">
         <h2>Featured</h2>
         <ul class="list-portfolio">
-          {% for item in collections.Featured limit:4 %}
+          {% for item in collections.featured limit:4 %}
             {% render "list-portfolio-item.liquid", item: item %}
           {% endfor %}
         </ul>
       </div>
     {% endif %}
 
-    {% if collections.Portfolio != blank %}
+    {% if collections.portfolio != blank %}
       <div class="group-portfolio group-portfolio-recent">
         <h2>Recent</h2>
         <ul class="list-portfolio">
-          {% for item in collections.Portfolio limit:4 %}
+          {% for item in collections.portfolio limit:4 %}
             {% render "list-portfolio-item.liquid", item: item %}
           {% endfor %}
         </ul>
