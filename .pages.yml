@@ -1,6 +1,6 @@
 media:
   input: content/media
-  output: /content/media
+  output: /media
 components:
   image:
     type: object
