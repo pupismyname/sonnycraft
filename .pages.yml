@@ -95,3 +95,4 @@ content:
         type: reference
         options:
           collection: categories
+          multiple: true
