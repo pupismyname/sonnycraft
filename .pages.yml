@@ -41,6 +41,9 @@ content:
         label: Slug
         type: string
         description: What appears in the URL for this category. Lowercase, no spaces or punctuation, but dashes are ok.
+      - name: hidden
+        label: Hide this category
+        type: boolean
   - name: portfolio
     label: Portfolio
     type: collection
