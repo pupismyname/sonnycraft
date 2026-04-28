@@ -43,7 +43,7 @@ content:
       - name: hidden
         label: Hide this category
         type: boolean
-      - name: body
+      - name: description
         label: Description
         type: rich-text
   - name: portfolio
