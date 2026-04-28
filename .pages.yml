@@ -31,6 +31,17 @@ content:
         description: A little about yourself.
         options:
           format: html
+      - name: categories
+        label: Categories
+        type: object
+        list: true
+        fields:
+        - name: label
+          label: Label
+          type: string
+        - name: slug
+          label: Slug
+          type: string
   - name: portfolio
     label: Portfolio
     type: collection
