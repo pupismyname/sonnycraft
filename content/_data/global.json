@@ -1,33 +1,3 @@
 {
-  "bio": "<p>Sonny is an artist and art educator living in Omaha, Nebraska, USA. She has nearly 8 years experience creating and teaching arts and crafts for individuals or groups.</p><p>Would you like to work with Sonny? <a href=\"mailto:sonnybrooks99@gmail.com\">Get in touch</a>.</p>",
-  "categories": [
-    {
-      "label": "Canvas Paintings",
-      "slug": "canvas"
-    },
-    {
-      "label": "Custom Door Hangers",
-      "slug": "hangers"
-    },
-    {
-      "label": "Digital Art",
-      "slug": "digital"
-    },
-    {
-      "label": "Handlettering",
-      "slug": "handlettering"
-    },
-    {
-      "label": "Stencils & Decals",
-      "slug": "stencils-decals"
-    },
-    {
-      "label": "String Art",
-      "slug": "string"
-    },
-    {
-      "label": "Other Crafts",
-      "slug": "other"
-    }
-  ]
+  "bio": "<p>Sonny is an artist and art educator living in Omaha, Nebraska, USA. She has nearly 8 years experience creating and teaching arts and crafts for individuals or groups.</p><p>Would you like to work with Sonny? <a href=\"mailto:sonnybrooks99@gmail.com\">Get in touch</a>.</p>"
 }
