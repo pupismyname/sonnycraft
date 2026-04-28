@@ -91,5 +91,3 @@ content:
         type: reference
         options:
           collection: categories
-          value: {slug}
-          label: {label}
