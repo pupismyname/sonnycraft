@@ -95,4 +95,4 @@ content:
         type: reference
         options:
           collection: categories
-          search: "categories"
+          search: "categories.slug,categories.label"
