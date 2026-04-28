@@ -27,7 +27,8 @@
   {
     "label": "String Art",
     "slug": "string",
-    "hidden": false
+    "hidden": false,
+    "body": "asdf"
   },
   {
     "label": "Other Crafts",
