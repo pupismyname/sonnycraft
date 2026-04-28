@@ -95,7 +95,6 @@ content:
         type: reference
         options:
           collection: categories
-          multiple: true
           search: "label,slug"
           value: "{slug}"
           label: "{label}"
