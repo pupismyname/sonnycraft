@@ -28,9 +28,8 @@ content:
           format: html
   - name: categories
     label: Categories
-    type: collection
-    filename: "{primary}.md"
-    path: content/_data
+    type: file
+    path: content/_data/categories.json
     view:
       primary: slug
     fields:
