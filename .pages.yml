@@ -91,3 +91,4 @@ content:
         type: reference
         options:
           collection: categories
+          search: "label,slug,description"
