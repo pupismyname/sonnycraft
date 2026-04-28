@@ -31,8 +31,8 @@ content:
     type: file
     path: content/_data/categories.json
     fields:
-      - name: category
-        label: Category
+      - name: categories
+        label: Categories
         type: object
         list:
           collapsible:
