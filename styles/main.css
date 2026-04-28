@@ -9,6 +9,8 @@
   --text-color: #000000ff;
   --underline-color: #444444ff;
   --background-color: #ffffffff;
+  --hover-scale: 0.95;
+  --animation-speed: 0.2s;
 }
 
 @media (min-width: 400px) {
@@ -48,7 +50,7 @@ a {
   text-decoration-skip-ink: none;
   text-decoration-color: var(--underline-color);
   transition-property: text-decoration-thickness, text-decoration-color;
-  transition-duration: 0.2s;
+  transition-duration: var(--animation-speed);
   transition-timing-function: ease, linear;
 }
 
@@ -146,20 +148,21 @@ footer {
   position: relative;
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  border: 1px solid var(--background-color);
-  margin: -1px;
-  transition: transform 0.2s ease;
-}
-
-.list-portfolio > li:hover, .list-portfolio > li:focus-within {
-  z-index: 1;
-  transform: scale(1.03);
 }
 
 .list-portfolio > li > a {
   display: block;
   position: absolute;
   inset: 0;
+}
+
+.list-portfolio > li > a img {
+  transition: transform var(--animation-speed) ease;
+}
+
+.list-portfolio > li > a:hover img,
+.list-portfolio > li > a:focus img {
+  transform: scale(var(--hover-scale));
 }
 
 .list-portfolio img {
@@ -209,12 +212,12 @@ a.list-entry-link {
 
 a.list-entry-link:hover img,
 a.list-entry-link:focus img {
-  transform: scale(1.03);
+  transform: scale(var(--hover-scale));
 }
 
 a.list-entry-link img {
   display: block;
-  transition: transform 0.2s ease;
+  transition: transform var(--animation-speed) ease;
 }
 
 .entry-header .meta {
