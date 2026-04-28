@@ -37,7 +37,7 @@ content:
         list:
           collapsible:
             collapsed: true
-            summary: "{Label}: {slug}"
+            summary: "{label}: {slug}"
         fields:
         - name: label
           label: Label
