@@ -86,8 +86,7 @@ content:
           collapsible:
             collapsed: true
             summary: "{title} ({index})"
-      - name: categories
-        label: Categories
+      - name: categoriesa
         type: reference
         options:
           collection: categories
