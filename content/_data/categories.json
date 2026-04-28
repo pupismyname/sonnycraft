@@ -30,13 +30,13 @@
     "hidden": false
   },
   {
-    "label": "Other Crafts",
-    "slug": "other",
+    "label": "test",
+    "slug": "test",
     "hidden": false
   },
   {
-    "label": "test",
-    "slug": "test",
+    "label": "Other Crafts",
+    "slug": "other",
     "hidden": false
   }
 ]
