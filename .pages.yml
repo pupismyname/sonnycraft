@@ -94,7 +94,7 @@ content:
         label: Categories
         type: reference
         options:
-          collection: categories
+          collection: categories.categories
           search: "label,slug"
           value: "{slug}"
           label: "{label}"
