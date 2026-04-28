@@ -20,20 +20,24 @@ published: false
   {{ content }}
 </div>
 
-<div class="section-entry entry-gallery">
-  <h2>Gallery</h2>
-  <ul class="list-entry">
-    {% for image in images %}
-      {% render "list-entry-item.liquid", image: image %}
-    {% endfor %}
-  </ul>
-</div>
+{% if images != blank %}
+  <div class="section-entry entry-gallery">
+    <h2>Gallery</h2>
+    <ul class="list-entry">
+      {% for image in images %}
+        {% render "list-entry-item.liquid", image: image %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
 
-<aside class="section-entry entry-references">
-  <h2>References</h2>
-  <ul class="list-entry">
-    {% for image in references %}
-      {% render "list-entry-item.liquid", image: image %}
-    {% endfor %}
-  </ul>
-</aside>
+{% if references != blank %}
+  <aside class="section-entry entry-references">
+    <h2>References</h2>
+    <ul class="list-entry">
+      {% for image in references %}
+        {% render "list-entry-item.liquid", image: image %}
+      {% endfor %}
+    </ul>
+  </aside>
+{% endif %}

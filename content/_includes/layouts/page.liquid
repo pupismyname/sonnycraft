@@ -12,23 +12,27 @@ layout: layouts/layout.liquid
 
     <h1>More from Sonny</h1>
 
-    <div class="group-portfolio group-portfolio-featured">
-      <h2>Featured</h2>
-      <ul class="list-portfolio">
-        {% for item in collections.Featured limit:4 %}
-          {% render "list-portfolio-item.liquid", item: item %}
-        {% endfor %}
-      </ul>
-    </div>
+    {% if collections.Featured != blank %}
+      <div class="group-portfolio group-portfolio-featured">
+        <h2>Featured</h2>
+        <ul class="list-portfolio">
+          {% for item in collections.Featured limit:4 %}
+            {% render "list-portfolio-item.liquid", item: item %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
 
-    <div class="group-portfolio group-portfolio-recent">
-      <h2>Recent</h2>
-      <ul class="list-portfolio">
-        {% for item in collections.Portfolio limit:4 %}
-          {% render "list-portfolio-item.liquid", item: item %}
-        {% endfor %}
-      </ul>
-    </div>
+    {% if collections.Portfolio != blank %}
+      <div class="group-portfolio group-portfolio-recent">
+        <h2>Recent</h2>
+        <ul class="list-portfolio">
+          {% for item in collections.Portfolio limit:4 %}
+            {% render "list-portfolio-item.liquid", item: item %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
 
   </aside>
 
