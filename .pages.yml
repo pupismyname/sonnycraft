@@ -29,7 +29,8 @@ content:
   - name: categories
     label: Categories
     type: collection
-    path: content/_data/categories.json
+    filename: "{primary}.md"
+    path: content/_data
     view:
       primary: slug
     fields:
