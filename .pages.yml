@@ -31,6 +31,8 @@ content:
     type: file
     format: json
     list: true
+    view:
+      fields: [label]
     path: content/_data/categories.json
     fields:
       - name: label
