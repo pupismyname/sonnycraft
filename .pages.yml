@@ -30,8 +30,7 @@ content:
     label: Categories
     type: file
     format: json
-    list:
-      collapsible: true
+    list: true
     path: content/_data/categories.json
     fields:
       - name: label
