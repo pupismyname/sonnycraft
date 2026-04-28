@@ -58,7 +58,7 @@ content:
         label: Categories
         type: reference
         options:
-          collection: global.categories
+          collection: categories
       - name: date
         label: Date
         type: date
