@@ -4,8 +4,8 @@ date: 2026-04-28T15:21
 published: true
 featured: true
 images:
-  - image: /media/1037-200x300.jpg
-    title: A beautiful sunrise
+  - image: /media/11-1200x1600.jpg
+    title: A foggy mountain
     description: This is an image from Lorem Picsum.
 ---
 I decided this should be the first entry. It shows a single image with no references.
