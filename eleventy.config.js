@@ -1,7 +1,10 @@
 import { DateTime } from 'luxon';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
+import pluginDrafts from './eleventy.config.drafts.js';
 
 export default async function (eleventyConfig) {
+
+	eleventyConfig.addPlugin(pluginDrafts);
 
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		widths: [ 850, 'auto' ],

@@ -1,3 +1,6 @@
+---
+published: true
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,9 +41,11 @@
         </nav>
       </header>
 
-      <aside class="bio">
-        {{ global.bio }}
-      </aside>
+      {% if global.bio %}
+        <aside class="bio">
+          {{ global.bio }}
+        </aside>
+      {% endif %}
 
       {{ content }}
 
