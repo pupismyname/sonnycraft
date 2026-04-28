@@ -28,9 +28,9 @@ content:
           format: html
   - name: categories
     label: Categories
-    type: collection
-    filename: "{slug}.md"
-    path: content/categories
+    type: file
+    path: content/_data/categories.json
+    list: true
     fields:
       - name: label
         label: Label
