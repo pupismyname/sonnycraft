@@ -9,15 +9,11 @@ components:
       - name: image
         label: Image
         type: image
-        media: media
-        rename: safe
       - name: title
-        label: Title
-        description: The title of this specific image.
+        label: Title of this image
         type: string
       - name: description
-        label: Description
-        description: The description for this specific image.
+        label: Description for this image
         type: rich-text
 content:
   - name: global
@@ -26,9 +22,8 @@ content:
     path: content/_data/global.json
     fields:
       - name: bio
-        label: Bio
+        label: A little about yourself
         type: rich-text
-        description: A little about yourself.
         options:
           format: html
       - name: categories
@@ -72,26 +67,22 @@ content:
         default: false
       - name: images
         label: Images
-        description: Images for this entry, best one first.
         component: image
         list:
           collapsible:
             collapsed: true
             summary: "{title} ({index})"
       - name: references
-        label: References
-        description: References for this entry, if any.
+        label: Reference images
         component: image
         list:
           collapsible:
             collapsed: true
             summary: "{title} ({index})"
       - name: body
-        label: Body
-        description: A description for this entry, or just write whatever.
+        label: Description
         type: rich-text
       - name: tags
         label: Tags
-        description: Categories for this entry.
         type: string
         list: true
