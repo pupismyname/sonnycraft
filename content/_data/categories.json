@@ -1,5 +1,9 @@
 {
-  "label": "asdf",
-  "slug": "asdfasdf",
-  "hidden": false
+  "category": [
+    {
+      "label": "asdfasdf",
+      "slug": "asdf",
+      "hidden": false
+    }
+  ]
 }
