@@ -63,13 +63,11 @@ content:
           time: true
           format: yyyy-MM-dd'T'HH:mm
       - name: published
-        label: Published
-        description: Ready to publish?
+        label: Publish this entry
         type: boolean
         default: true
       - name: featured
-        label: Featured
-        description: Feature this item
+        label: Feature this entry
         type: boolean
         default: false
       - name: images
