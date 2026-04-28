@@ -91,4 +91,4 @@ content:
         options:
           collection: categories
           multiple: true
-          search: "fields.label,fields.slug,fields.description"
+          search: "name,label"
