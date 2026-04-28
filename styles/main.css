@@ -5,12 +5,13 @@
 
 :root {
   font-size: 85%;
-  --border-color: #00000022;
-  --text-color: #000000ff;
-  --underline-color: #444444ff;
-  --background-color: #ffffffff;
-  --hover-scale: 0.95;
-  --animation-speed: 0.2s;
+  --c-border: #00000020;
+  --c-text: #000000ff;
+  --c-underline: #00000088;
+  --c-bg: #ffffffff;
+  --c-bg-alt: #00000008;
+  --scale-hover: 0.95;
+  --speed-animation: 0.2s;
 }
 
 @media (min-width: 400px) {
@@ -35,8 +36,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  color: var(--text-color);
-  background: var(--background-color);
+  color: var(--c-text);
+  background: var(--c-bg);
   display: grid;
   gap: 0.5rem;
   grid-template-columns: 1fr minmax(auto, 100ch) 1fr;
@@ -44,18 +45,18 @@ body {
 }
 
 a {
-  color: var(--text-color);
+  color: var(--c-text);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
-  text-decoration-color: var(--underline-color);
+  text-decoration-color: var(--c-underline);
   transition-property: text-decoration-thickness, text-decoration-color;
-  transition-duration: var(--animation-speed);
+  transition-duration: var(--speed-animation);
   transition-timing-function: ease, linear;
 }
 
 a:hover, a:focus, a:active {
-  text-decoration-color: var(--text-color);
+  text-decoration-color: var(--c-text);
   text-decoration-thickness: 0.2em;
 }
 
@@ -83,10 +84,15 @@ p, ul, ol, dl, table, blockquote {
 }
 
 .masthead {
-  display: flex;
-  gap: 1rem 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 1rem 3rem;
   align-items: baseline;
+}
+
+@media (min-width: 600px) {
+  .masthead {
+    grid-template-columns: auto auto;
+  }
 }
 
 .masthead h1 {
@@ -124,7 +130,8 @@ footer {
 }
 
 .bio {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--c-border);
+  background: var(--c-bg-alt);
   padding: 1rem 2rem;
 }
 
@@ -157,13 +164,13 @@ footer {
 }
 
 .list-portfolio > li > a img {
-  transition: transform var(--animation-speed) ease;
+  transition: transform var(--speed-animation) ease;
   max-width: 40ch;
 }
 
 .list-portfolio > li > a:hover img,
 .list-portfolio > li > a:focus img {
-  transform: scale(var(--hover-scale));
+  transform: scale(var(--scale-hover));
 }
 
 .list-portfolio img {
@@ -208,17 +215,17 @@ footer {
 a.list-entry-link {
   display: block;
   padding: 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--c-border);
 }
 
 a.list-entry-link:hover img,
 a.list-entry-link:focus img {
-  transform: scale(var(--hover-scale));
+  transform: scale(var(--scale-hover));
 }
 
 a.list-entry-link img {
   display: block;
-  transition: transform var(--animation-speed) ease;
+  transition: transform var(--speed-animation) ease;
 }
 
 .entry-header .meta {

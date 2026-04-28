@@ -24,11 +24,6 @@ export default async function (eleventyConfig) {
 		return DateTime.fromISO(dateString, 'yyyy-MM-ddTHH:mm', { zone: 'America/Chicago' }).toFormat('DDD, t');
 	});
 
-	eleventyConfig.addFilter('filterTags', (tags) => {
-		if (!tags) return [];
-		return filterTags(tags).sort();
-	});
-
 	// for debug
 	eleventyConfig.addFilter('json', (obj) => {
 		return `<pre>${JSON.stringify(obj, null, 2)}</pre>`;
@@ -53,13 +48,6 @@ export default async function (eleventyConfig) {
 		// Concat the two lists and slice off any extra.
 		return featuredItems.concat(otherItems).slice(0, featured + other);
 	});
-
-	function filterTags (tags) {
-		const remove = [ 'Portfolio', 'Test' ];
-		return tags.filter((tag) => {
-			return !remove.includes(tag);
-		});
-	}
 
 	return {
 		dir: {
