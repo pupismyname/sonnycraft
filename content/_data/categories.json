@@ -2,7 +2,8 @@
   {
     "label": "Canvas Paintings",
     "slug": "canvas",
-    "hidden": false
+    "hidden": false,
+    "body": "asdfasdf"
   },
   {
     "label": "Custom Door Hangers",
