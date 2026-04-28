@@ -30,10 +30,6 @@ content:
     label: Categories
     type: collection
     path: content/_data/categories.json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{slug} ({label})"
     view:
       primary: slug
     fields:
