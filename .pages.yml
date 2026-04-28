@@ -29,27 +29,21 @@ content:
   - name: categories
     label: Categories
     type: file
+    format: json
+    list: true
     path: content/_data/categories.json
     fields:
-      - name: categories
-        label: Categories
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{label}"
-        fields:
-          - name: label
-            label: Label
-            type: string
-            description: The pretty name for this category.
-          - name: slug
-            label: Slug
-            type: string
-            description: What appears in the URL for this category. Lowercase, no spaces or punctuation, but dashes are ok.
-          - name: hidden
-            label: Hide this category
-            type: boolean
+      - name: label
+        label: Label
+        type: string
+        description: The pretty name for this category.
+      - name: slug
+        label: Slug
+        type: string
+        description: What appears in the URL for this category. Lowercase, no spaces or punctuation, but dashes are ok.
+      - name: hidden
+        label: Hide this category
+        type: boolean
   - name: portfolio
     label: Portfolio
     type: collection
