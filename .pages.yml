@@ -51,6 +51,11 @@ content:
       - name: title
         label: Title
         type: string
+      - name: categories
+        label: Categories
+        type: reference
+        options:
+          collection: global.categories
       - name: date
         label: Date
         type: date
