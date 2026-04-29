@@ -93,6 +93,7 @@ content:
         options:
           collection: categories
           multiple: true
+          creatable: true
           search: "title,slug,description"
           value: "{slug}"
           label: "{title}"
