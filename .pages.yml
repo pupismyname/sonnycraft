@@ -28,9 +28,9 @@ content:
           format: html
   - name: categories
     label: Categories
-    type: collection
-    filename: "{primary}.md"
-    path: content/categories
+    type: file
+    format: json
+    path: content/_data/categories.json
     list: true
     fields:
       - name: title
@@ -44,7 +44,7 @@ content:
       - name: hidden
         label: Hide this category
         type: boolean
-      - name: body
+      - name: description
         label: Description
         type: rich-text
   - name: portfolio
