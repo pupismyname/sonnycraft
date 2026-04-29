@@ -37,7 +37,7 @@ export default (eleventyConfig) => {
 		let text = 'Excluding';
 		// Only show drafts in serve/watch modes
 		if (runMode === 'serve' || runMode === 'watch') {
-			// process.env.BUILD_DRAFTS = true;
+			process.env.BUILD_DRAFTS = true;
 			text = 'Including';
 		}
 		// Only log once.

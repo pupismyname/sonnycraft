@@ -94,6 +94,10 @@ p, ul, ol, dl, table, blockquote {
   margin: 2rem 0 0.4rem;
 }
 
+.masthead nav {
+  place-self: baseline end;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;

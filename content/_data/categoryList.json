@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Custom Door Hangers",
+    "slug": "hangers",
+    "hidden": false
+  },
+  {
+    "title": "Canvas Paintings",
+    "slug": "canvas",
+    "hidden": false
+  },
+  {
+    "title": "Digital Art",
+    "slug": "digital",
+    "hidden": false
+  },
+  {
+    "title": "Handlettering",
+    "slug": "handlettering",
+    "hidden": false
+  },
+  {
+    "title": "Stencils & Decals",
+    "slug": "stencils-decals",
+    "hidden": false
+  },
+  {
+    "title": "String Art",
+    "slug": "string",
+    "hidden": false
+  },
+  {
+    "title": "Other Crafts",
+    "slug": "other",
+    "hidden": false
+  }
+]
