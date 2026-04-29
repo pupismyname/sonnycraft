@@ -44,9 +44,6 @@ content:
       - name: hidden
         label: Hide this category
         type: boolean
-      - name: description
-        label: Description
-        type: rich-text
   - name: portfolio
     label: Portfolio
     type: collection
@@ -93,7 +90,6 @@ content:
         options:
           collection: categories
           multiple: true
-          creatable: true
           search: "title,slug,description"
           value: "{slug}"
           label: "{title}"
