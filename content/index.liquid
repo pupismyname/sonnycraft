@@ -1,13 +1,19 @@
-{% if collections.portfolioHome != blank %}
+---
+layout: layouts/layout.liquid
+---
 
-  <header>
-    <h1>Featured and recent work</h1>
-  </header>
+<main>
+  {% if collections.portfolioHome != blank %}
 
-  <ul class="list-portfolio">
-    {% for item in collections.portfolioHome %}
-      {% render "list-portfolio-item.liquid", item: item %}
-    {% endfor %}
-  </ul>
+    <header>
+      <h1>Featured and recent work</h1>
+    </header>
 
-{% endif %}
+    <ul class="list-portfolio">
+      {% for item in collections.portfolioHome %}
+        {% render "list-portfolio-item.liquid", item: item %}
+      {% endfor %}
+    </ul>
+
+  {% endif %}
+</main>

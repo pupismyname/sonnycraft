@@ -2,18 +2,20 @@
 pagination:
   data: collections.categories
   size: 1
-  alias: category
+  alias: slug
 eleventyComputed:
-  title: "{{ category }} work"
-permalink: "/categories/{{ category }}/"
+  title: "{{ slug }} work"
+permalink: "/categories/{{ slug }}/"
 ---
+
+{% assign category = categoryList | find: "slug", slug %}
 
 <header>
   <h1>{{ category.title }}</h1>
 </header>
 <ul class="list-portfolio">
   {% for item in collections.portfolio %}
-    {% if item.categories contains category %}
+    {% if item.data.categories contains slug %}
       {% render "list-portfolio-item.liquid", item: item %}
     {% endif %}
   {% endfor %}

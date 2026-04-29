@@ -26,7 +26,14 @@ export default async function (eleventyConfig) {
 
 	// for debug
 	eleventyConfig.addFilter('json', (obj) => {
-		return `<pre>${JSON.stringify(obj, null, 2)}</pre>`;
+		console.log(obj);
+		return obj;
+		// return `<pre>${JSON.stringify(obj, null, 2)}</pre>`;
+	});
+
+	eleventyConfig.addCollection('featured', async (collectionApi) => {
+		const portfolio = collectionApi.getFilteredByTag('portfolio');
+		return portfolio.filter((item) => item.data.featured);
 	});
 
 	// Build a list of 40 portfolio items. The first 10 featured items are bumped to the top.
