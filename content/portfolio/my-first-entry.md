@@ -7,5 +7,9 @@ images:
   - image: /media/11-1200x1600.jpg
     title: A foggy mountain
     description: This is an image from Lorem Picsum.
+categories:
+  - hangers
+  - digital
+  - string
 ---
 I decided this should be the first entry. It shows a single image with no references.
