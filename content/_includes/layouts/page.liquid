@@ -6,7 +6,7 @@ layout: layouts/layout.liquid
   {{ content }}
 </main>
 
-{% if collections.featured != blank and collections.portfolio != blank %}
+{% if collections.featured != blank or collections.portfolio != blank %}
 
   <aside class="explore">
 

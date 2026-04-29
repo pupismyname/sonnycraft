@@ -33,8 +33,7 @@ published: true
         <nav>
           <ul>
             {% for category in categories %}
-              {% capture categoryUrl -%}/categories/{{ category.slug }}/{% endcapture -%}
-              <li><a href="{{ categoryUrl }}">{{ category.label }}</a></li>
+              <li><a href="/categories/{{ category.slug }}/">{{ category.title }}</a></li>
             {% endfor %}
           </ul>
         </nav>

@@ -4,16 +4,17 @@ pagination:
   size: 1
   alias: category
 eleventyComputed:
-  title: "{{ category }} work"
+  title: "{{ category.title }} work"
 permalink: "/categories/{{ category.slug }}/"
 ---
 
 <header>
-  <h1>{{ category.label }} work</h1>
+  <h1>{{ category.title }}</h1>
 </header>
-
 <ul class="list-portfolio">
-  {% for item in category %}
-    {% render "list-portfolio-item.liquid", item: item %}
+  {% for item in collections.portfolio %}
+    {% if item.categories contains category.slug %}
+      {% render "list-portfolio-item.liquid", item: item %}
+    {% endif %}
   {% endfor %}
 </ul>
