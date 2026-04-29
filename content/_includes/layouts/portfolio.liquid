@@ -3,7 +3,7 @@ layout: layouts/content.liquid
 ---
 
 <header class="entry-header">
-  <h1>{{ title }}</h1>
+  <h1>{{ title | default: "No title"}}</h1>
   <div class="meta">
     <p class="meta-date"><a href=".">{{ date | niceDate }}</a></p>
     <ul class="list-tags meta-categories">

@@ -1,6 +1,9 @@
 <li>
   <a href="{{ item.url }}">
-    <img alt="{{ item.data.images[0].title }}" src="{{item.data.images[0].image}}">
-    <h2>{{ item.data.title }}</h2>
+    {% unless item.data.images == blank %}
+      {% assign image = item.data.images[0] %}
+      <img alt="{{ image.title | default: image.image }}" src="{{image.image}}">
+    {% endunless %}
+    <h2>{{ item.data.title | default: "No title" }}</h2>
   </a>
 </li>

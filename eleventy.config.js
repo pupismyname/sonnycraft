@@ -61,7 +61,7 @@ export default async function (eleventyConfig) {
 		const portfolio = collectionApi.getFilteredByTag('portfolio');
 		const categories = new Set();
 		portfolio.forEach((item) => {
-			item.data.categories.forEach((category) => categories.add(category));
+			item.data.categories?.forEach((category) => categories.add(category));
 		});
 		return Array.from(categories);
 	});
