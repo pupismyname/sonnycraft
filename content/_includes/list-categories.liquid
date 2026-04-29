@@ -1,4 +1,5 @@
-{% for slug in slugs %}
-  {% assign category = list | find: "slug", slug %}
-  <li><a href="/categories/{{ category.slug }}/">{{ category.title }}</a></li>
+{% for item in list %}
+  {% if slugs contains item.slug %}
+    <li><a href="/categories/{{ item.slug }}/">{{ item.title }}</a></li>
+  {% endif %}
 {% endfor %}
