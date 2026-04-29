@@ -69,8 +69,8 @@ content:
       - name: categories
         label: Categories
         type: select
-        multiple: true
         options:
+          multiple: true
           values:
             - name: hangers
               label: Custom Door Hangers
