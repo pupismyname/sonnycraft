@@ -93,4 +93,3 @@ content:
         options:
           collection: categories
           multiple: true
-          search: "title"
