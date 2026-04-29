@@ -4,7 +4,7 @@ pagination:
   size: 1
   alias: slug
 eleventyComputed:
-  title: "{{ slug }} work"
+  title: "{% assign category = categoryList | find: 'slug', slug %}{{ category.title }}"
 permalink: "/categories/{{ slug }}/"
 ---
 

@@ -125,7 +125,7 @@ header, aside, main, footer {
 }
 
 main {
-  margin: 5rem 0;
+  margin: 5rem 0 10rem;
 }
 
 footer {
@@ -150,6 +150,10 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
+aside .list-portfolio {
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+}
+
 .list-portfolio > li {
   list-style-type: none;
   margin: 0;
@@ -157,8 +161,9 @@ footer {
   position: relative;
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  max-width: 18rem; /* needed for when there are too few items to make a full row */
+  max-width: 30rem; /* needed for when there are too few items to make a full row */
 }
+
 
 .list-portfolio > li > a {
   display: block;
@@ -168,7 +173,6 @@ footer {
 
 .list-portfolio > li > a img {
   transition: transform var(--speed-animation) ease;
-  max-width: 40ch;
 }
 
 .list-portfolio > li > a:hover img,

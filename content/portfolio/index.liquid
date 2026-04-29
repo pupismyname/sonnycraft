@@ -1,0 +1,18 @@
+---
+layout: layouts/layout.liquid
+title: Portfolio
+eleventyExcludeFromCollections: true
+---
+
+<main>
+  {% if collections.portfolio != blank %}
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
+    <ul class="list-portfolio">
+      {% for item in collections.portfolio %}
+        {% render "list-portfolio-item.liquid", item: item %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</main>
