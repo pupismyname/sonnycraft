@@ -26,24 +26,6 @@ content:
         type: rich-text
         options:
           format: html
-  - name: categories
-    label: Categories
-    type: file
-    format: json
-    path: content/_data/categories.json
-    list: true
-    fields:
-      - name: title
-        label: Title
-        type: string
-        description: The pretty name for this category.
-      - name: slug
-        label: Slug
-        type: string
-        description: What appears in the URL for this category. Lowercase, no spaces or punctuation, but dashes are ok.
-      - name: hidden
-        label: Hide this category
-        type: boolean
   - name: portfolio
     label: Portfolio
     type: collection
@@ -86,10 +68,21 @@ content:
             summary: "{title} ({index})"
       - name: categories
         label: Categories
-        type: reference
+        type: select
+        multiple: true
         options:
-          collection: categories
-          multiple: true
-          search: "title,slug,description"
-          value: "{slug}"
-          label: "{title}"
+          values:
+            - name: hangers
+              label: Custom Door Hangers
+            - name: canvas
+              label: Canvas Paintings
+            - name: digital
+              label: Digital Art
+            - name: handlettering
+              label: Handlettering
+            - name: stencils-decals
+              label: Stencils & Decals
+            - name: string
+              label: String Art
+            - name: other
+              label: Other Crafts
