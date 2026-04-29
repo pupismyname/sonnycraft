@@ -11,4 +11,6 @@ categories:
   - hangers
 published: true
 featured: false
+images:
+  - image: /media/980-1600x1200.jpg
 ---
