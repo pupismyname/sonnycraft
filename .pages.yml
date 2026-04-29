@@ -60,6 +60,26 @@ content:
         options:
           time: true
           format: yyyy-MM-dd'T'HH:mm
+      - name: categories
+        label: Categories
+        type: select
+        options:
+          multiple: true
+          values:
+            - name: hangers
+              label: Custom Door Hangers
+            - name: canvas
+              label: Canvas Paintings
+            - name: digital
+              label: Digital Art
+            - name: handlettering
+              label: Handlettering
+            - name: stencils-decals
+              label: Stencils & Decals
+            - name: string
+              label: String Art
+            - name: other
+              label: Other Crafts
       - name: published
         label: Publish
         type: boolean
@@ -85,23 +105,3 @@ content:
           collapsible:
             collapsed: true
             summary: "{title} ({index})"
-      - name: categories
-        label: Categories
-        type: select
-        options:
-          multiple: true
-          values:
-            - name: hangers
-              label: Custom Door Hangers
-            - name: canvas
-              label: Canvas Paintings
-            - name: digital
-              label: Digital Art
-            - name: handlettering
-              label: Handlettering
-            - name: stencils-decals
-              label: Stencils & Decals
-            - name: string
-              label: String Art
-            - name: other
-              label: Other Crafts
