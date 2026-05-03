@@ -16,35 +16,6 @@ components:
         label: Description for this image
         type: rich-text
 content:
-  - name: global
-    label: Global
-    type: file
-    path: content/_data/global.json
-    fields:
-      - name: bio
-        label: A little about yourself
-        type: rich-text
-        options:
-          format: html
-  - name: categories
-    label: Categories
-    type: file
-    format: json
-    path: content/_data/categoryList.json
-    description: This does not populate the select box in the portfolio entry form. That select box is controlled in the portfolio config. The two lists should match up. A future update to PagesCMS (sometime in mid-2026?) will allow the select box to reference this data directly.
-    list: true
-    fields:
-      - name: title
-        label: Title
-        type: string
-        description: The pretty name for this category.
-      - name: slug
-        label: Slug
-        type: string
-        description: What appears in the URL for this category. Lowercase, no spaces or punctuation, but dashes are ok.
-      - name: hidden
-        label: Hide this category
-        type: boolean
   - name: portfolio
     label: Portfolio
     type: collection
@@ -105,3 +76,32 @@ content:
           collapsible:
             collapsed: true
             summary: "{title} ({index})"
+  - name: global
+    label: Global
+    type: file
+    path: content/_data/global.json
+    fields:
+      - name: bio
+        label: A little about yourself
+        type: rich-text
+        options:
+          format: html
+  - name: categories
+    label: Categories
+    type: file
+    format: json
+    path: content/_data/categoryList.json
+    description: This does not populate the select box in the portfolio entry form. That select box is controlled in the portfolio config. The two lists should match up. A future update to PagesCMS (sometime in mid-2026?) will allow the select box to reference this data directly.
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        description: The pretty name for this category.
+      - name: slug
+        label: Slug
+        type: string
+        description: What appears in the URL for this category. Lowercase, no spaces or punctuation, but dashes are ok.
+      - name: hidden
+        label: Hide this category
+        type: boolean
