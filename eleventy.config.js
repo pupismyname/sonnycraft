@@ -9,9 +9,9 @@ export default async function (eleventyConfig) {
 	// copy assets
 	//--
 
-	eleventyConfig.addPassthroughCopy('styles'); // stylesheets, no build step
-	eleventyConfig.addPassthroughCopy('content/media', 'media'); // Images uploaded through PagesCMS
-	// Why `media` and `img`? See note on imagePlugin below.
+	eleventyConfig.addPassthroughCopy('styles'); // Stylesheets, no build step
+	eleventyConfig.addPassthroughCopy('content/images', 'images'); // Non-portfolio images
+	eleventyConfig.addPassthroughCopy('content/media', 'media'); // Portfolio images from PagesCMS
 	eleventyConfig.addPassthroughCopy('content/img', 'img'); // Cached images from 11ty-img
 
 	//--
@@ -29,6 +29,8 @@ export default async function (eleventyConfig) {
 	// should be periodically run locally and the results checked into git.
 	eleventyConfig.addPlugin(imagePlugin, {
 		widths: [ 850, 'auto' ],
+		formats: [ 'auto', 'svg', 'webp' ],
+		svgShortCircuit: true,
 		htmlOptions: {
 			imgAttributes: {
 				loading: 'lazy',
