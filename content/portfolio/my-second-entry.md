@@ -1,6 +1,6 @@
 ---
 title: My second entry
-date: 2026-04-29T12:42
+date: 2026-04-29T13:02
 published: true
 featured: false
 images:

@@ -15,13 +15,17 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf _site",
+    "clean": "rm -r _site",
     "dev": "npx @11ty/eleventy --serve --quiet",
-    "build": "npx @11ty/eleventy --quiet"
+    "build": "npx @11ty/eleventy --quiet",
+    "images": "npm run images:clean; npm run images:build",
+    "images:clean": "npm run clean; rm -r content/img",
+    "images:build": "npm run build; cp -R _site/img content/img"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.5",
     "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
     "luxon": "^3.7.2"
   }
 }

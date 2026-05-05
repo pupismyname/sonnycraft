@@ -1,0 +1,52 @@
+---json
+{
+  "layout": "",
+  "permalink": "feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "collection": {
+			"name": "portfolio",
+			"limit": 10
+		},
+  "eleventyComputed": {
+    "metadata": {
+      "title": "{{ global.title }}",
+      "description": "{{ global.description }}",
+      "language": "en",
+      "base": "{{ global.url }}",
+      "author": {
+        "name": "{{ global.author }}"
+      }
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.description }}</subtitle>
+  <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
+  <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
+  <updated>{{ collections.portfolio | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+  {%- for post in collections.portfolio | reverse %}
+    {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset %}
+    <entry>
+      <title>{{ post.data.title }}</title>
+      <link href="{{ absolutePostUrl }}" />
+      <updated>{{ post.date | dateToRfc3339 }}</updated>
+      <id>{{ absolutePostUrl }}</id>
+      <content type="html">
+        {% set content %}
+          {% for image in post.data.images %}
+            <img alt="{{ image.title | default(image.image) }}" src="{{ image.image }}">
+          {% endfor %}
+          {{ post.content }}
+        {% endset %}
+        {{ content | renderTransforms(post.data.page, metadata.base) }}
+      </content>
+    </entry>
+  {%- endfor %}
+</feed>

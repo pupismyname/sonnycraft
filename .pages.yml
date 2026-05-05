@@ -81,8 +81,25 @@ content:
     type: file
     path: content/_data/global.json
     fields:
+      - name: title
+        label: Title
+        description: The name of the site.
+        type: text
+      - name: description
+        label: Description
+        description: A short description of the site.
+        type: text
+      - name: url
+        label: URL
+        description: The root of the site.
+        type: text
+      - name: author
+        label: Author
+        description: The name that appears in the RSS feed.
+        type: text
       - name: bio
-        label: A little about yourself
+        label: Bio
+        description: A little about yourself.
         type: rich-text
         options:
           format: html
