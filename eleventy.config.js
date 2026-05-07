@@ -62,7 +62,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addCollection('portfolioHome', async (collectionApi) => {
 		const featured = 10;
 		const other = 30;
-		const portfolio = collectionApi.getFilteredByTag('portfolio');
+		const portfolio = collectionApi.getFilteredByTag('portfolio').toReversed();
 		const featuredItems = [];
 		const otherItems = [];
 		// use a for loop instead of forEach so it's easy to break out

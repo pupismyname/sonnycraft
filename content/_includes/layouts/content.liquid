@@ -16,7 +16,7 @@ layout: layouts/layout.liquid
       <div class="group-portfolio group-portfolio-featured">
         <h2>Featured</h2>
         <ul class="list-portfolio">
-          {% for item in collections.featured limit:6 %}
+          {% for item in collections.featured limit:6 reversed %}
             {% render "list-portfolio-item.liquid", item: item %}
           {% endfor %}
         </ul>
@@ -27,7 +27,7 @@ layout: layouts/layout.liquid
       <div class="group-portfolio group-portfolio-recent">
         <h2>Recent</h2>
         <ul class="list-portfolio">
-          {% for item in collections.portfolio limit:6 %}
+          {% for item in collections.portfolio limit:6 reversed %}
             {% render "list-portfolio-item.liquid", item: item %}
           {% endfor %}
         </ul>
