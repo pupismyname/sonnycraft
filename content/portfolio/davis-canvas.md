@@ -1,6 +1,8 @@
 ---
 title: Davis Canvas
 date: 2026-05-12T17:49
+categories:
+  - canvas
 published: true
 featured: false
 images:
