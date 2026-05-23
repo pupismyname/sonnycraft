@@ -7,6 +7,13 @@
   --c-bg-alt: #00000008;
   --scale-hover: 0.97;
   --speed-animation: 0.2s;
+  --header-size-modifier: 1;
+  --default-h1: 2em;
+  --default-h2: 1.5em;
+  --default-h3: 1.17em;
+  --default-h4: 1em;
+  --default-h5: 0.83em;
+  --default-h6: 0.67em;
 }
 
 @media (min-width: 400px) {
@@ -30,12 +37,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Kedebideri", sans-serif;
   color: var(--c-text);
   background: var(--c-bg);
   display: grid;
   gap: 1rem;
-  grid-template-columns: auto minmax(auto, 100ch) auto;
+  grid-template-columns: auto minmax(auto, 110ch) auto;
   line-height: 1.4;
   overflow-y: scroll; /* force scrollbar to prevent layout shift between pages */
 }
@@ -61,15 +68,22 @@ img {
   max-width: 100%;
 }
 
-.borel-regular,
+.bree-serif-regular,
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Borel", cursive;
+  font-family: "Bree Serif", serif;
   font-weight: 400;
   font-style: normal;
-  line-height: 0.9;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  /* line-height: 0.9; */
+  /* margin-top: 2.5rem; */
+  /* margin-bottom: 1rem; */
 }
+
+h1 { font-size: calc(var(--default-h1) * var(--header-size-modifier)); }
+h2 { font-size: calc(var(--default-h2) * var(--header-size-modifier)); }
+h3 { font-size: calc(var(--default-h3) * var(--header-size-modifier)); }
+h4 { font-size: calc(var(--default-h4) * var(--header-size-modifier)); }
+h5 { font-size: calc(var(--default-h5) * var(--header-size-modifier)); }
+h6 { font-size: calc(var(--default-h6) * var(--header-size-modifier)); }
 
 p, ul, ol, dl, table, blockquote {
   margin-block: 1rem;
@@ -121,12 +135,24 @@ nav ul li {
   margin: -0.5rem;
 }
 
-header, aside, main, footer {
+header,
+aside,
+main,
+footer {
   margin: 1rem 0;
 }
 
+.wrapper > header {
+  --header-size-modifier: 1.2;
+}
+
+aside,
+footer {
+  --header-size-modifier: 0.8;
+}
+
 main {
-  margin: 5rem 0 10rem;
+  margin: 3rem 0;
 }
 
 footer {
@@ -134,6 +160,12 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+footer nav p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .bio {
@@ -269,5 +301,5 @@ a.list-entry-link img {
 }
 
 .group-portfolio {
-  margin: 3rem 0 5rem 0;
+  margin: 3rem 0;
 }

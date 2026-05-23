@@ -4,16 +4,15 @@ layout: layouts/layout.liquid
 
 <main>
   {% if collections.portfolioHome != blank %}
-
-    <header>
-      <h1>Featured and recent work</h1>
-    </header>
-
-    <ul class="list-portfolio">
-      {% for item in collections.portfolioHome %}
-        {% render "list-portfolio-item.liquid", item: item %}
-      {% endfor %}
-    </ul>
-
+    <div class="group-portfolio">
+      <header>
+        <h1>Featured and recent work</h1>
+      </header>
+      <ul class="list-portfolio">
+        {% for item in collections.portfolioHome %}
+          {% render "list-portfolio-item.liquid", item: item %}
+        {% endfor %}
+      </ul>
+    </div>
   {% endif %}
 </main>

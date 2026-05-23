@@ -2,6 +2,7 @@ import { DateTime } from 'luxon';
 import { eleventyImageTransformPlugin as imagePlugin } from '@11ty/eleventy-img';
 import draftPlugin from './eleventy.config.drafts.js';
 import feedPlugin from '@11ty/eleventy-plugin-rss';
+import fs from 'fs';
 
 export default async function (eleventyConfig) {
 
@@ -87,6 +88,15 @@ export default async function (eleventyConfig) {
 			item.data.categories?.forEach((category) => categories.add(category));
 		});
 		return Array.from(categories);
+	});
+
+	// Include all the images on a hidden page so they will be optimized even if they aren't used elsewhere.
+	// Get all the filenames (excluding dotfiles and directories).
+	eleventyConfig.addCollection('images', async (collectionApi) => {
+		return fs.readdirSync('./content/media', { withFileTypes: true })
+			.filter((item) => {
+				return !item.name.startsWith('.') && !item.isDirectory();
+			}).map((item) => item.name);
 	});
 
 	return {

@@ -1,0 +1,20 @@
+---
+layout: layouts/layout.liquid
+---
+
+{% comment %}
+  Dump all the images to a page so 11ty-image will optimize them, even if they aren't used elsewhere.
+{% endcomment %}
+<main>
+  <div class="group-portfolio">
+    {% if collections.images != blank %}
+      <ul class="list-portfolio">
+        {% for image in collections.images %}
+          <img alt="" src="/media/{{ image }}">
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No images yet.</p>
+    {% endif %}
+  </div>
+</main>

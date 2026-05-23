@@ -10,13 +10,15 @@ permalink: "/categories/{{ slug }}/"
 
 {% assign category = categoryList | find: "slug", slug %}
 
-<header>
-  <h1>{{ category.title }}</h1>
-</header>
-<ul class="list-portfolio">
-  {% for item in collections.portfolio reversed %}
-    {% if item.data.categories contains slug %}
-      {% render "list-portfolio-item.liquid", item: item %}
-    {% endif %}
-  {% endfor %}
-</ul>
+<div class="group-portfolio">
+  <header>
+    <h1>{{ category.title }}</h1>
+  </header>
+  <ul class="list-portfolio">
+    {% for item in collections.portfolio reversed %}
+      {% if item.data.categories contains slug %}
+        {% render "list-portfolio-item.liquid", item: item %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

@@ -2,7 +2,7 @@
   <a href="{{ item.url }}">
     {% unless item.data.images == blank %}
       {% assign image = item.data.images[0] %}
-      <img alt="{{ image.title | default: image.image }}" src="{{image.image}}">
+      <img alt="{{ image.title | default: image.image }}" src="{{ image.image }}">
     {% endunless %}
     <h2>{{ item.data.title | default: "No title" }}</h2>
   </a>

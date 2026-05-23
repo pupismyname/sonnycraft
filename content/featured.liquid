@@ -1,0 +1,20 @@
+---
+layout: layouts/layout.liquid
+---
+
+<main>
+  <div class="group-portfolio">
+    {% if collections.featured != blank %}
+      <header>
+        <h1>Featured Work</h1>
+      </header>
+      <ul class="list-portfolio">
+        {% for item in collections.featured reversed %}
+          {% render "list-portfolio-item.liquid", item: item %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No featured work yet.</p>
+    {% endif %}
+  </div>
+</main>
