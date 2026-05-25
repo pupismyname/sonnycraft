@@ -109,8 +109,11 @@ p, ul, ol, dl, table, blockquote {
   margin: 2rem 0 0.4rem;
 }
 
-.masthead nav {
-  place-self: baseline end;
+
+@media (min-width: 600px) {
+  .masthead nav {
+    place-self: baseline end;
+  }
 }
 
 nav ul {
